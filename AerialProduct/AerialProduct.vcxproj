@@ -1,0 +1,334 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{5B7C198C-B203-4AE4-B24B-F3863B5F8F40}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>AerialProduct</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>..\GDAL;C:\Users\Administrator\Documents\GitHub\AerialProduct\opencv\include;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <None Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="AerialCore.h" />
+    <ClInclude Include="AerialErrDef.h" />
+    <ClInclude Include="AerialProductCvLibImport.h" />
+    <ClInclude Include="AuxiliaryFunction.h" />
+    <ClInclude Include="CoordinateTrans.h" />
+    <ClInclude Include="GDALTools.h" />
+    <ClInclude Include="Level0Process.h" />
+    <ClInclude Include="Level1Process.h" />
+    <ClInclude Include="Level2Process.h" />
+    <ClInclude Include="LevelCameraCalibrate.h" />
+    <ClInclude Include="LevelUAVProcess.h" />
+    <ClInclude Include="matrixOperation.h" />
+    <ClInclude Include="MosaicProcess.h" />
+    <ClInclude Include="opencv\include\opencv2\calib3d.hpp" />
+    <ClInclude Include="opencv\include\opencv2\calib3d\calib3d.hpp" />
+    <ClInclude Include="opencv\include\opencv2\calib3d\calib3d_c.h" />
+    <ClInclude Include="opencv\include\opencv2\core.hpp" />
+    <ClInclude Include="opencv\include\opencv2\core\affine.hpp" />
+    <ClInclude Include="opencv\include\opencv2\core\base.hpp" />
+    <ClInclude Include="opencv\include\opencv2\core\bufferpool.hpp" />
+    <ClInclude Include="opencv\include\opencv2\core\core.hpp" />
+    <ClInclude Include="opencv\include\opencv2\core\core_c.h" />
+    <ClInclude Include="opencv\include\opencv2\core\cuda.hpp" />
+    <ClInclude Include="opencv\include\opencv2\core\cuda.inl.hpp" />
+    <ClInclude Include="opencv\include\opencv2\core\cuda_stream_accessor.hpp" />
+    <ClInclude Include="opencv\include\opencv2\core\cuda_types.hpp" />
+    <ClInclude Include="opencv\include\opencv2\core\cvdef.h" />
+    <ClInclude Include="opencv\include\opencv2\core\cvstd.hpp" />
+    <ClInclude Include="opencv\include\opencv2\core\cvstd.inl.hpp" />
+    <ClInclude Include="opencv\include\opencv2\core\directx.hpp" />
+    <ClInclude Include="opencv\include\opencv2\core\eigen.hpp" />
+    <ClInclude Include="opencv\include\opencv2\core\fast_math.hpp" />
+    <ClInclude Include="opencv\include\opencv2\core\hal\hal.hpp" />
+    <ClInclude Include="opencv\include\opencv2\core\hal\interface.h" />
+    <ClInclude Include="opencv\include\opencv2\core\hal\intrin.hpp" />
+    <ClInclude Include="opencv\include\opencv2\core\hal\intrin_cpp.hpp" />
+    <ClInclude Include="opencv\include\opencv2\core\hal\intrin_neon.hpp" />
+    <ClInclude Include="opencv\include\opencv2\core\hal\intrin_sse.hpp" />
+    <ClInclude Include="opencv\include\opencv2\core\ippasync.hpp" />
+    <ClInclude Include="opencv\include\opencv2\core\mat.hpp" />
+    <ClInclude Include="opencv\include\opencv2\core\mat.inl.hpp" />
+    <ClInclude Include="opencv\include\opencv2\core\matx.hpp" />
+    <ClInclude Include="opencv\include\opencv2\core\neon_utils.hpp" />
+    <ClInclude Include="opencv\include\opencv2\core\ocl.hpp" />
+    <ClInclude Include="opencv\include\opencv2\core\ocl_genbase.hpp" />
+    <ClInclude Include="opencv\include\opencv2\core\opengl.hpp" />
+    <ClInclude Include="opencv\include\opencv2\core\operations.hpp" />
+    <ClInclude Include="opencv\include\opencv2\core\optim.hpp" />
+    <ClInclude Include="opencv\include\opencv2\core\persistence.hpp" />
+    <ClInclude Include="opencv\include\opencv2\core\private.cuda.hpp" />
+    <ClInclude Include="opencv\include\opencv2\core\private.hpp" />
+    <ClInclude Include="opencv\include\opencv2\core\ptr.inl.hpp" />
+    <ClInclude Include="opencv\include\opencv2\core\saturate.hpp" />
+    <ClInclude Include="opencv\include\opencv2\core\sse_utils.hpp" />
+    <ClInclude Include="opencv\include\opencv2\core\traits.hpp" />
+    <ClInclude Include="opencv\include\opencv2\core\types.hpp" />
+    <ClInclude Include="opencv\include\opencv2\core\types_c.h" />
+    <ClInclude Include="opencv\include\opencv2\core\utility.hpp" />
+    <ClInclude Include="opencv\include\opencv2\core\va_intel.hpp" />
+    <ClInclude Include="opencv\include\opencv2\core\version.hpp" />
+    <ClInclude Include="opencv\include\opencv2\core\wimage.hpp" />
+    <ClInclude Include="opencv\include\opencv2\cvconfig.h" />
+    <ClInclude Include="opencv\include\opencv2\features2d.hpp" />
+    <ClInclude Include="opencv\include\opencv2\features2d\features2d.hpp" />
+    <ClInclude Include="opencv\include\opencv2\flann.hpp" />
+    <ClInclude Include="opencv\include\opencv2\flann\allocator.h" />
+    <ClInclude Include="opencv\include\opencv2\flann\all_indices.h" />
+    <ClInclude Include="opencv\include\opencv2\flann\any.h" />
+    <ClInclude Include="opencv\include\opencv2\flann\autotuned_index.h" />
+    <ClInclude Include="opencv\include\opencv2\flann\composite_index.h" />
+    <ClInclude Include="opencv\include\opencv2\flann\config.h" />
+    <ClInclude Include="opencv\include\opencv2\flann\defines.h" />
+    <ClInclude Include="opencv\include\opencv2\flann\dist.h" />
+    <ClInclude Include="opencv\include\opencv2\flann\dummy.h" />
+    <ClInclude Include="opencv\include\opencv2\flann\dynamic_bitset.h" />
+    <ClInclude Include="opencv\include\opencv2\flann\flann.hpp" />
+    <ClInclude Include="opencv\include\opencv2\flann\flann_base.hpp" />
+    <ClInclude Include="opencv\include\opencv2\flann\general.h" />
+    <ClInclude Include="opencv\include\opencv2\flann\ground_truth.h" />
+    <ClInclude Include="opencv\include\opencv2\flann\hdf5.h" />
+    <ClInclude Include="opencv\include\opencv2\flann\heap.h" />
+    <ClInclude Include="opencv\include\opencv2\flann\hierarchical_clustering_index.h" />
+    <ClInclude Include="opencv\include\opencv2\flann\index_testing.h" />
+    <ClInclude Include="opencv\include\opencv2\flann\kdtree_index.h" />
+    <ClInclude Include="opencv\include\opencv2\flann\kdtree_single_index.h" />
+    <ClInclude Include="opencv\include\opencv2\flann\kmeans_index.h" />
+    <ClInclude Include="opencv\include\opencv2\flann\linear_index.h" />
+    <ClInclude Include="opencv\include\opencv2\flann\logger.h" />
+    <ClInclude Include="opencv\include\opencv2\flann\lsh_index.h" />
+    <ClInclude Include="opencv\include\opencv2\flann\lsh_table.h" />
+    <ClInclude Include="opencv\include\opencv2\flann\matrix.h" />
+    <ClInclude Include="opencv\include\opencv2\flann\miniflann.hpp" />
+    <ClInclude Include="opencv\include\opencv2\flann\nn_index.h" />
+    <ClInclude Include="opencv\include\opencv2\flann\object_factory.h" />
+    <ClInclude Include="opencv\include\opencv2\flann\params.h" />
+    <ClInclude Include="opencv\include\opencv2\flann\random.h" />
+    <ClInclude Include="opencv\include\opencv2\flann\result_set.h" />
+    <ClInclude Include="opencv\include\opencv2\flann\sampling.h" />
+    <ClInclude Include="opencv\include\opencv2\flann\saving.h" />
+    <ClInclude Include="opencv\include\opencv2\flann\simplex_downhill.h" />
+    <ClInclude Include="opencv\include\opencv2\flann\timer.h" />
+    <ClInclude Include="opencv\include\opencv2\highgui.hpp" />
+    <ClInclude Include="opencv\include\opencv2\highgui\highgui.hpp" />
+    <ClInclude Include="opencv\include\opencv2\highgui\highgui_c.h" />
+    <ClInclude Include="opencv\include\opencv2\imgcodecs.hpp" />
+    <ClInclude Include="opencv\include\opencv2\imgcodecs\imgcodecs.hpp" />
+    <ClInclude Include="opencv\include\opencv2\imgcodecs\imgcodecs_c.h" />
+    <ClInclude Include="opencv\include\opencv2\imgcodecs\ios.h" />
+    <ClInclude Include="opencv\include\opencv2\imgproc.hpp" />
+    <ClInclude Include="opencv\include\opencv2\imgproc\detail\distortion_model.hpp" />
+    <ClInclude Include="opencv\include\opencv2\imgproc\imgproc.hpp" />
+    <ClInclude Include="opencv\include\opencv2\imgproc\imgproc_c.h" />
+    <ClInclude Include="opencv\include\opencv2\imgproc\types_c.h" />
+    <ClInclude Include="opencv\include\opencv2\ml.hpp" />
+    <ClInclude Include="opencv\include\opencv2\ml\ml.hpp" />
+    <ClInclude Include="opencv\include\opencv2\objdetect.hpp" />
+    <ClInclude Include="opencv\include\opencv2\objdetect\detection_based_tracker.hpp" />
+    <ClInclude Include="opencv\include\opencv2\objdetect\objdetect.hpp" />
+    <ClInclude Include="opencv\include\opencv2\objdetect\objdetect_c.h" />
+    <ClInclude Include="opencv\include\opencv2\opencv.hpp" />
+    <ClInclude Include="opencv\include\opencv2\opencv_modules.hpp" />
+    <ClInclude Include="opencv\include\opencv2\photo.hpp" />
+    <ClInclude Include="opencv\include\opencv2\photo\cuda.hpp" />
+    <ClInclude Include="opencv\include\opencv2\photo\photo.hpp" />
+    <ClInclude Include="opencv\include\opencv2\photo\photo_c.h" />
+    <ClInclude Include="opencv\include\opencv2\shape.hpp" />
+    <ClInclude Include="opencv\include\opencv2\shape\emdL1.hpp" />
+    <ClInclude Include="opencv\include\opencv2\shape\hist_cost.hpp" />
+    <ClInclude Include="opencv\include\opencv2\shape\shape.hpp" />
+    <ClInclude Include="opencv\include\opencv2\shape\shape_distance.hpp" />
+    <ClInclude Include="opencv\include\opencv2\shape\shape_transformer.hpp" />
+    <ClInclude Include="opencv\include\opencv2\stitching.hpp" />
+    <ClInclude Include="opencv\include\opencv2\stitching\detail\autocalib.hpp" />
+    <ClInclude Include="opencv\include\opencv2\stitching\detail\blenders.hpp" />
+    <ClInclude Include="opencv\include\opencv2\stitching\detail\camera.hpp" />
+    <ClInclude Include="opencv\include\opencv2\stitching\detail\exposure_compensate.hpp" />
+    <ClInclude Include="opencv\include\opencv2\stitching\detail\matchers.hpp" />
+    <ClInclude Include="opencv\include\opencv2\stitching\detail\motion_estimators.hpp" />
+    <ClInclude Include="opencv\include\opencv2\stitching\detail\seam_finders.hpp" />
+    <ClInclude Include="opencv\include\opencv2\stitching\detail\timelapsers.hpp" />
+    <ClInclude Include="opencv\include\opencv2\stitching\detail\util.hpp" />
+    <ClInclude Include="opencv\include\opencv2\stitching\detail\util_inl.hpp" />
+    <ClInclude Include="opencv\include\opencv2\stitching\detail\warpers.hpp" />
+    <ClInclude Include="opencv\include\opencv2\stitching\detail\warpers_inl.hpp" />
+    <ClInclude Include="opencv\include\opencv2\stitching\warpers.hpp" />
+    <ClInclude Include="opencv\include\opencv2\superres.hpp" />
+    <ClInclude Include="opencv\include\opencv2\superres\optical_flow.hpp" />
+    <ClInclude Include="opencv\include\opencv2\video.hpp" />
+    <ClInclude Include="opencv\include\opencv2\videoio.hpp" />
+    <ClInclude Include="opencv\include\opencv2\videoio\cap_ios.h" />
+    <ClInclude Include="opencv\include\opencv2\videoio\videoio.hpp" />
+    <ClInclude Include="opencv\include\opencv2\videoio\videoio_c.h" />
+    <ClInclude Include="opencv\include\opencv2\videostab.hpp" />
+    <ClInclude Include="opencv\include\opencv2\videostab\deblurring.hpp" />
+    <ClInclude Include="opencv\include\opencv2\videostab\fast_marching.hpp" />
+    <ClInclude Include="opencv\include\opencv2\videostab\fast_marching_inl.hpp" />
+    <ClInclude Include="opencv\include\opencv2\videostab\frame_source.hpp" />
+    <ClInclude Include="opencv\include\opencv2\videostab\global_motion.hpp" />
+    <ClInclude Include="opencv\include\opencv2\videostab\inpainting.hpp" />
+    <ClInclude Include="opencv\include\opencv2\videostab\log.hpp" />
+    <ClInclude Include="opencv\include\opencv2\videostab\motion_core.hpp" />
+    <ClInclude Include="opencv\include\opencv2\videostab\motion_stabilizing.hpp" />
+    <ClInclude Include="opencv\include\opencv2\videostab\optical_flow.hpp" />
+    <ClInclude Include="opencv\include\opencv2\videostab\outlier_rejection.hpp" />
+    <ClInclude Include="opencv\include\opencv2\videostab\ring_buffer.hpp" />
+    <ClInclude Include="opencv\include\opencv2\videostab\stabilizer.hpp" />
+    <ClInclude Include="opencv\include\opencv2\videostab\wobble_suppression.hpp" />
+    <ClInclude Include="opencv\include\opencv2\video\background_segm.hpp" />
+    <ClInclude Include="opencv\include\opencv2\video\tracking.hpp" />
+    <ClInclude Include="opencv\include\opencv2\video\tracking_c.h" />
+    <ClInclude Include="opencv\include\opencv2\video\video.hpp" />
+    <ClInclude Include="opencv\include\opencv2\world.hpp" />
+    <ClInclude Include="opencv\include\opencv\cv.h" />
+    <ClInclude Include="opencv\include\opencv\cv.hpp" />
+    <ClInclude Include="opencv\include\opencv\cvaux.h" />
+    <ClInclude Include="opencv\include\opencv\cvaux.hpp" />
+    <ClInclude Include="opencv\include\opencv\cvwimage.h" />
+    <ClInclude Include="opencv\include\opencv\cxcore.h" />
+    <ClInclude Include="opencv\include\opencv\cxcore.hpp" />
+    <ClInclude Include="opencv\include\opencv\cxeigen.hpp" />
+    <ClInclude Include="opencv\include\opencv\cxmisc.h" />
+    <ClInclude Include="opencv\include\opencv\highgui.h" />
+    <ClInclude Include="opencv\include\opencv\ml.h" />
+    <ClInclude Include="PosProc.h" />
+    <ClInclude Include="LevelPreProcess.h" />
+    <ClInclude Include="siftGPU\CLTexImage.h" />
+    <ClInclude Include="siftGPU\CuTexImage.h" />
+    <ClInclude Include="siftGPU\FrameBufferObject.h" />
+    <ClInclude Include="siftGPU\GlobalUtil.h" />
+    <ClInclude Include="siftGPU\GLTexImage.h" />
+    <ClInclude Include="siftGPU\GL\glew.h" />
+    <ClInclude Include="siftGPU\GL\glut.h" />
+    <ClInclude Include="siftGPU\GL\wglew.h" />
+    <ClInclude Include="siftGPU\IL\il.h" />
+    <ClInclude Include="siftGPU\LiteWindow.h" />
+    <ClInclude Include="siftGPU\ProgramCG.h" />
+    <ClInclude Include="siftGPU\ProgramCL.h" />
+    <ClInclude Include="siftGPU\ProgramCU.h" />
+    <ClInclude Include="siftGPU\ProgramGLSL.h" />
+    <ClInclude Include="siftGPU\ProgramGPU.h" />
+    <ClInclude Include="siftGPU\PyramidCL.h" />
+    <ClInclude Include="siftGPU\PyramidCU.h" />
+    <ClInclude Include="siftGPU\PyramidGL.h" />
+    <ClInclude Include="siftGPU\ShaderMan.h" />
+    <ClInclude Include="siftGPU\SiftGPU.h" />
+    <ClInclude Include="siftGPU\SiftMatch.h" />
+    <ClInclude Include="siftGPU\SiftMatchCU.h" />
+    <ClInclude Include="siftGPU\SiftPyramid.h" />
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="targetver.h" />
+    <ClInclude Include="tsmUTM.h" />
+    <ClInclude Include="XMLParam.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="AerialCore.cpp" />
+    <ClCompile Include="AerialProduct.cpp" />
+    <ClCompile Include="AuxiliaryFunction.cpp" />
+    <ClCompile Include="CoordinateTrans.cpp" />
+    <ClCompile Include="GDALTools.cpp" />
+    <ClCompile Include="Level0Process.cpp" />
+    <ClCompile Include="Level1Process.cpp" />
+    <ClCompile Include="Level2Process.cpp" />
+    <ClCompile Include="LevelCameraCalibrate.cpp" />
+    <ClCompile Include="LevelUAVProcess.cpp" />
+    <ClCompile Include="matrixOperation.cpp" />
+    <ClCompile Include="MosaicProcess.cpp" />
+    <ClCompile Include="PosProc.cpp" />
+    <ClCompile Include="LevelPreProcess.cpp" />
+    <ClCompile Include="siftGPU\CLTexImage.cpp" />
+    <ClCompile Include="siftGPU\CuTexImage.cpp" />
+    <ClCompile Include="siftGPU\FrameBufferObject.cpp" />
+    <ClCompile Include="siftGPU\GlobalUtil.cpp" />
+    <ClCompile Include="siftGPU\GLTexImage.cpp" />
+    <ClCompile Include="siftGPU\ProgramCG.cpp" />
+    <ClCompile Include="siftGPU\ProgramCL.cpp" />
+    <ClCompile Include="siftGPU\ProgramGLSL.cpp" />
+    <ClCompile Include="siftGPU\ProgramGPU.cpp" />
+    <ClCompile Include="siftGPU\PyramidCL.cpp" />
+    <ClCompile Include="siftGPU\PyramidCU.cpp" />
+    <ClCompile Include="siftGPU\PyramidGL.cpp" />
+    <ClCompile Include="siftGPU\ShaderMan.cpp" />
+    <ClCompile Include="siftGPU\SiftGPU.cpp" />
+    <ClCompile Include="siftGPU\SiftMatch.cpp" />
+    <ClCompile Include="siftGPU\SiftMatchCU.cpp" />
+    <ClCompile Include="siftGPU\SiftPyramid.cpp" />
+    <ClCompile Include="stdafx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="tsmUTM.cpp" />
+    <ClCompile Include="XMLParam.cpp" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
